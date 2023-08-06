@@ -7,9 +7,9 @@ TaskHub's smart notification system ensures that you never miss a deadline or fo
 So, if you're ready to take control of your tasks and boost your productivity, look no further than TaskHub. With its user-friendly interface, powerful features, and robust functionality, TaskHub is the ultimate task management app that will transform the way you work.
 
 
-📧 Email: mohammadhadisormeyli@gmail.com
+📧 Email: mohammadhadisormeyli@gmail.com <br/>
 🌐 GitHub: https://github.com/HadiSormeyli/
-
+<br/>
 Feel free to reach out to me via email or connect with me. I'm always open to collaboration and networking opportunities!
 
 
@@ -24,4 +24,15 @@ Feel free to reach out to me via email or connect with me. I'm always open to co
 
 <br/><br/>
 
-MVVM java,kotlin app using room database,rxjava,livedata.
+Minimum SDK level 21
+Kotlin,Java
+Lifecycle: Observe Android lifecycles and handle UI states upon the lifecycle changes.
+ViewModel: Manages UI-related data holder and lifecycle aware. Allows data to survive configuration changes such as screen rotations.
+DataBinding: Binds UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
+Room: Constructs Database by providing an abstraction layer over SQLite to allow fluent database access.
+Navigation Component Graphs - To use single activity multiple fragment architecture.
+Hilt: For dependency injection.
+Coroutines For asynchronous programming.
+Architecture
+MVVM Architecture (View - DataBinding - ViewModel - Model)
+Repository Pattern
