@@ -14,23 +14,23 @@ Feel free to reach out to me via email or connect with me. I'm always open to co
 
 
 <p float="left">
-  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image1.png" width="100" />
-  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image2.png" width="100" />
-  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image4.png" width="100" />
-  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image6.png" width="100" />
-  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image7.png" width="100" />
-  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image8.png" width="100" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image1.png" width="150" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image2.png" width="150" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image4.png" width="150" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image6.png" width="150" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image7.png" width="150" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image8.png" width="150" />
 </p>
 <br/><br/>
 Minimum SDK level 21<br/>
-  Kotlin,Java<br/>
-    Lifecycle: Observe Android lifecycles and handle UI states upon the lifecycle changes.<br/>
-    ViewModel: Manages UI-related data holder and lifecycle aware. Allows data to survive configuration changes such as screen rotations.<br/>
-    DataBinding: Binds UI components in your layouts to data sources in your app using a declarative format rather than programmatically.<br/>
-    Room: Constructs Database by providing an abstraction layer over SQLite to allow fluent database access.<br/>
-    Navigation Component Graphs - To use single activity multiple fragment architecture.<br/>
-    Hilt: For dependency injection.<br/>
-    Coroutines For asynchronous programming.<br/>
+  &emsp;Kotlin,Java<br/>
+    &emsp;Lifecycle: Observe Android lifecycles and handle UI states upon the lifecycle changes.<br/>
+    &emsp;ViewModel: Manages UI-related data holder and lifecycle aware. Allows data to survive configuration changes such as screen rotations.<br/>
+    &emsp;DataBinding: Binds UI components in your layouts to data sources in your app using a declarative format rather than programmatically.<br/>
+    &emsp;Room: Constructs Database by providing an abstraction layer over SQLite to allow fluent database access.<br/>
+    &emsp;Navigation Component Graphs - To use single activity multiple fragment architecture.<br/>
+    &emsp;Hilt: For dependency injection.<br/>
+    &emsp;Coroutines For asynchronous programming.<br/>
 Architecture<br/>
-  MVVM Architecture (View - DataBinding - ViewModel - Model)<br/>
-  Repository Pattern<br/>
+  &emsp;MVVM Architecture (View - DataBinding - ViewModel - Model)<br/>
+  &emsp;Repository Pattern<br/>
