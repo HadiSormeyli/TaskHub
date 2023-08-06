@@ -12,12 +12,15 @@ So, if you're ready to take control of your tasks and boost your productivity, l
 
 Feel free to reach out to me via email or connect with me. I'm always open to collaboration and networking opportunities!
 
-![alt text](https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image1.png) 
-![alt text](https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image2.png)
-![alt text](https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image4.png)
-![alt text](https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image6.png)
-![alt text](https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image7.png)
-![alt text](https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image8.png)
+
+<p float="left">
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image1.png" width="100" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image2.png" width="100" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image4.png" width="100" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image6.png" width="100" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image7.png" width="100" />
+  <img src="https://github.com/HadiSormeyli/TaskHub/blob/master/screenshots/image8.png" width="100" />
+</p>
 
 <br/><br/>
 
