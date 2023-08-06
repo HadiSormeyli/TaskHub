@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@+id/home_nav">
+
+    <include app:graph="@navigation/home_nav" />
+    <include app:graph="@navigation/category_nav" />
+    <include app:graph="@navigation/profile_nav" />
+
+    <fragment
+        android:id="@+id/addCategoryFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.main.category.AddCategoryFragment"
+        android:label="AddCategoryFragment" />
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.main.task.AddTaskFragment"
+        android:label="AddTaskFragment" />
+
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.main.task.TaskDetailsFragment"
+        android:label="TaskDetailsFragment" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.main.search.SearchFragment"
+        android:label="TaskDetailsFragment" />
+
+    <fragment
+        android:id="@+id/categoryTasksFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.main.category.CategoryTasksFragment"
+        android:label="CategoryTasksFragment" />
+
+    <action
+        android:id="@+id/action_to_addCategoryFragment"
+        app:destination="@id/addCategoryFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/slide_down"
+        app:popEnterAnim="@anim/slide_up"
+        app:popExitAnim="@anim/slide_down" />
+
+    <action
+        android:id="@+id/action_to_addTaskFragment"
+        app:destination="@id/addTaskFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/slide_down"
+        app:popEnterAnim="@anim/slide_up"
+        app:popExitAnim="@anim/slide_down" />
+
+    <action
+        android:id="@+id/action_to_taskDetailsFragment"
+        app:destination="@id/taskDetailsFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/slide_down"
+        app:popEnterAnim="@anim/slide_up"
+        app:popExitAnim="@anim/slide_down" />
+
+    <action
+        android:id="@+id/action_to_searchFragment"
+        app:destination="@id/searchFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/slide_down"
+        app:popEnterAnim="@anim/slide_up"
+        app:popExitAnim="@anim/slide_down" />
+
+    <action
+        android:id="@+id/action_to_categoryTasksFragment"
+        app:destination="@id/categoryTasksFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/slide_down"
+        app:popEnterAnim="@anim/slide_up"
+        app:popExitAnim="@anim/slide_down" />
+</navigation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="date"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/header_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_space"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/all_corner_bg"
+            android:backgroundTint="@color/indigo_a_400"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_8"
+            android:paddingTop="4dp"
+            android:paddingEnd="@dimen/padding_8"
+            android:paddingBottom="4dp"
+            android:text="@{date}"
+            android:textColor="@color/pure_white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</layout>

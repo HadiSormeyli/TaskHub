@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <com.github.file_picker.view.SquareCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="false">
+
+        <!-- media image -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!-- error icon -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_error_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha=".5"
+            app:cardBackgroundColor="@android:color/darker_gray"
+            app:cardCornerRadius="48dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_error_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                tools:srcCompat="@drawable/ic_audiotrack" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- checked transparent color -->
+        <FrameLayout
+            android:id="@+id/frame_checked"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            tools:alpha=".5" />
+
+        <!-- media title -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="24dp"
+            app:cardPreventCornerOverlap="false">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                tools:text="10" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- checked icon -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha=".95"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_check"
+            app:tint="@android:color/white"
+            tools:visibility="visible" />
+
+        <!-- media title -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp"
+            app:cardPreventCornerOverlap="false">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="8sp"
+                tools:text="@tools:sample/lorem" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- bottom information -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardPreventCornerOverlap="false">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_file_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="8sp"
+                    tools:text="@tools:sample/lorem" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:layout_marginEnd="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardPreventCornerOverlap="false">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_media_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:padding="2.5dp"
+                    tools:srcCompat="@drawable/ic_play" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.github.file_picker.view.SquareCardView>
+
+</FrameLayout>

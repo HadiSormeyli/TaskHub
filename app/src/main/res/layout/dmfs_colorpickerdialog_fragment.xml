@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@android:id/title"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/pick_color" />
+
+    <com.mohammadhadisormeyli.taskmanagement.ui.custom.colorpicker.SquareViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-16dp"
+        android:layout_marginRight="-16dp"
+        android:layout_marginBottom="4dp">
+
+        <com.mohammadhadisormeyli.taskmanagement.ui.custom.colorpicker.view.DrawablePagerTabStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingLeft="24dp"
+            android:paddingTop="0dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="4dp" />
+    </com.mohammadhadisormeyli.taskmanagement.ui.custom.colorpicker.SquareViewPager>
+</LinearLayout>

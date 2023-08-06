@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/icd_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_corner_bg"
+    android:padding="@dimen/padding_8">
+
+    <TextView
+        android:id="@+id/icd_txv_title"
+        style="@style/IcdTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/icon"
+        app:layout_constraintBottom_toTopOf="@id/search_input_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <ImageView
+        android:id="@+id/selected_icon_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/side_space"
+        android:background="@drawable/all_corner_bg"
+        android:backgroundTint="#26FF9100"
+        android:padding="@dimen/padding_8"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#99FF9100" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/side_space"
+        android:layout_marginTop="@dimen/side_space"
+        android:layout_marginEnd="@dimen/side_space"
+        android:layout_marginBottom="@dimen/side_space"
+        android:hint=""
+        android:theme="@style/CategoryEditText"
+        app:boxBackgroundColor="?attr/colorOnBackground"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeWidth="0dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selected_icon_iv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/icd_edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:inputType="textAutoComplete"
+            android:selectAllOnFocus="true"
+            android:textColor="?attr/colorControlNormal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/icon_picker_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/side_space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_input_layout"
+        app:tabIndicatorColor="@color/orange_a_400"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/orange_a_400"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/icd_vp_icon_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/side_space"
+        android:layout_marginTop="@dimen/side_space"
+        android:layout_marginEnd="@dimen/side_space"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_picker_tab_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

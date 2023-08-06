@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mohammadhadisormeyli.taskmanagement.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.main.home.HomeFragment">
+
+        <com.mohammadhadisormeyli.taskmanagement.ui.custom.calendar.widget.CollapsibleCalendar
+            android:id="@+id/collapsible_calendar_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/side_space"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/all_corner_bg"
+            android:backgroundTint="?attr/colorPrimary"
+            app:buttonLeft_drawableTintColor="@color/pure_white"
+            app:buttonRight_drawableTintColor="@color/pure_white"
+            app:expandIconColor="@color/pure_white"
+            app:hideArrows="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:primaryColor="@android:color/transparent"
+            app:selectedItem_background="@drawable/circle_black_solid_bg"
+            app:textColor="@color/pure_white"
+            app:todayItem_background="@drawable/circle_black_solid_bg"
+            app:todayItem_textColor="@color/pure_white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_rv_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/top_corner_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/collapsible_calendar_view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_task_rv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/padding_8"
+                android:paddingBottom="104dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/task_item" />
+
+            <ProgressBar
+                android:id="@+id/home_tasks_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/no_task_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="You don not have any task at this month."
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/collapsible_calendar_view" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_top_linear_bg"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

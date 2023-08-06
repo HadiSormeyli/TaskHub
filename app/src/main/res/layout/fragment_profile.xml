@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.profile.ProfileFragment">
+
+        <RelativeLayout
+            android:id="@+id/user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bottom_oval_bg"
+            android:padding="@dimen/padding_8"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/profile_image_view"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_centerInParent="true"
+                android:background="?attr/colorSurface"
+                android:scaleType="centerCrop"
+                app:roundPercent="1" />
+
+            <com.mohammadhadisormeyli.taskmanagement.ui.custom.SemiCircleView
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_centerInParent="true"
+                app:arcProportion="0.6"
+                app:paint="@color/orange_600"
+                app:startAngle="15" />
+
+            <com.mohammadhadisormeyli.taskmanagement.ui.custom.SemiCircleView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                app:arcProportion="0.35"
+                app:paint="@color/yellow_600"
+                app:startAngle="130" />
+
+            <TextView
+                android:id="@+id/user_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/pure_white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/user_lastname_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name_text_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/side_space"
+                android:textColor="@color/pure_white"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/side_space"
+            android:layout_marginEnd="@dimen/side_space"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/all_corner_bg"
+            android:backgroundTint="?attr/colorSurface"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/padding_8"
+            android:paddingTop="16dp"
+            android:paddingEnd="@dimen/padding_8"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline">
+
+            <LinearLayout
+                android:id="@+id/edit_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/purple_a_200"
+                    android:padding="@dimen/padding_8"
+                    android:src="@drawable/ic_edit"
+                    app:roundPercent="1"
+                    app:tint="@color/pure_white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/side_space"
+                    android:layout_weight="1"
+                    android:text="@string/edit"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/touch_target"
+                    android:layout_height="@dimen/touch_target"
+                    android:padding="@dimen/padding_8"
+                    android:src="@drawable/ic_baseline_navigate_next_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_space"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/blue_a_200"
+                    android:padding="@dimen/padding_8"
+                    android:src="@drawable/ic_sun"
+                    app:roundPercent="1"
+                    app:tint="@color/pure_white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/side_space"
+                    android:layout_weight="1"
+                    android:text="@string/night_mode"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/night_mode_sc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_target"
+                    android:layout_margin="8dp"
+                    android:padding="@dimen/padding_8"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/side_space"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.constraintlayout.utils.widget.ImageFilterView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:background="@color/orange_a_200"-->
+<!--                    android:padding="@dimen/padding_8"-->
+<!--                    android:src="@drawable/ic_bell"-->
+<!--                    app:roundPercent="1"-->
+<!--                    app:tint="@color/pure_white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/side_space"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/reminder"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--                <androidx.appcompat.widget.SwitchCompat-->
+<!--                    android:id="@+id/reminder_switch_compact"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/touch_target"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:padding="@dimen/padding_8"-->
+<!--                    android:thumb="@drawable/thumb_selector"-->
+<!--                    app:track="@drawable/track_selector" />-->
+<!--            </LinearLayout>-->
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

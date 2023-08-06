@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mohammadhadisormeyli.taskmanagement.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorOnBackground"
+        android:layoutDirection="ltr"
+        tools:context=".ui.main.MainActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/main_nav" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            app:backgroundTint="?attr/colorSurface"
+            app:elevation="1dp"
+            app:fabAlignmentMode="end"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="8dp"
+            app:fabCradleVerticalOffset="8dp"
+            app:hideOnScroll="true">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/transparent"
+                app:elevation="0dp"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/main_menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fake_fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:elevation="0dp"
+            android:visibility="visible"
+            app:background="@android:color/transparent"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            app:layout_anchor="@id/bottom_appbar" />
+
+        <com.mohammadhadisormeyli.taskmanagement.ui.custom.floatingactionbutton.FloatingActionMenu
+            android:id="@+id/menu_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/fab_transformation_scrim_behavior"
+            android:elevation="4dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="34dp"
+            android:paddingBottom="40dp"
+            app:fab_elevationCompat="4dp"
+            app:menu_animationDelayPerItem="0"
+            app:menu_backgroundColor="@color/black_25"
+            app:menu_buttonSpacing="@dimen/side_space"
+            app:menu_colorNormal="?attr/colorPrimaryVariant"
+            app:menu_colorPressed="?attr/colorPrimary"
+            app:menu_colorRipple="?attr/colorSecondary"
+            app:menu_labels_colorNormal="?attr/colorControlNormal"
+            app:menu_labels_colorPressed="?attr/colorOnSecondary"
+            app:menu_labels_hideAnimation="@anim/fab_slide_in_from_left"
+            app:menu_labels_margin="@dimen/side_space"
+            app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            app:menu_labels_textColor="?attr/colorOnBackground">
+
+            <com.mohammadhadisormeyli.taskmanagement.ui.custom.floatingactionbutton.FloatingActionButton
+                android:id="@+id/task_floating_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_calender"
+                app:fab_colorNormal="?attr/colorPrimary"
+                app:fab_colorPressed="?attr/colorPrimaryVariant"
+                app:fab_label="@string/new_task"
+                app:fab_size="mini" />
+
+            <com.mohammadhadisormeyli.taskmanagement.ui.custom.floatingactionbutton.FloatingActionButton
+                android:id="@+id/category_floating_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_category"
+                app:fab_colorNormal="@color/blue_a_400"
+                app:fab_colorPressed="@color/blue_400"
+                app:fab_label="@string/new_category"
+                app:fab_size="mini" />
+        </com.mohammadhadisormeyli.taskmanagement.ui.custom.floatingactionbutton.FloatingActionMenu>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

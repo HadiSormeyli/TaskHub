@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="subTaskRelation"
+            type="com.mohammadhadisormeyli.taskmanagement.model.SubTaskRelation" />
+    </data>
+
+    <com.mohammadhadisormeyli.taskmanagement.ui.custom.swipelayout.SwipeRevealLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dragEdge="left"
+        app:mode="normal">
+
+        <FrameLayout
+            android:id="@+id/delete_frame_layout"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/side_space"
+                android:layout_marginEnd="@dimen/side_space"
+                android:layout_marginBottom="@dimen/side_space"
+                android:background="@drawable/all_corner_bg"
+                android:backgroundTint="@color/red_a_700" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/delete_task_iv"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_baseline_delete_24"
+                app:tint="@color/pure_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/task_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/side_space"
+                android:layout_marginTop="@dimen/side_space"
+                android:layout_marginEnd="@dimen/side_space"
+                android:layout_marginBottom="@dimen/side_space"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/category_color_view"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/all_corner_bg"
+                    app:opacity_backgroundColor="@{subTaskRelation.task.category.color}" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/task_item_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/all_corner_bg"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/task_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{subTaskRelation.task.title}"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/task_description_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="4dp"
+                        android:text="@{subTaskRelation.task.description}"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/task_title_tv" />
+
+                    <TextView
+                        android:id="@+id/task_progress_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/all_corner_bg"
+                        android:backgroundTint="?attr/colorOnBackground"
+                        android:paddingStart="@dimen/padding_8"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="@dimen/padding_8"
+                        android:paddingBottom="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/task_finish_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:alpha="0.6"
+                        android:drawableStart="@drawable/ic_baseline_access_time_filled_24"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/blue_grey_400"
+                        android:textSize="12sp"
+                        app:drawableTint="@color/blue_grey_400"
+                        app:endDate="@{subTaskRelation.task.endDate}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/task_description_tv"
+                        app:startDate="@{subTaskRelation.task.startDate}" />
+
+                    <View
+                        android:id="@+id/task_divider_view"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:alpha="0.3"
+                        android:background="@drawable/divider_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/task_finish_date_tv" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/task_category_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/all_corner_bg"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_8"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="@dimen/padding_8"
+                        android:drawablePadding="4dp"
+                        android:paddingBottom="4dp"
+                        app:drawableTint="?attr/colorControlNormal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/task_divider_view"
+                        app:opacity="@{0.4f}"
+                        app:opacity_backgroundColor="@{subTaskRelation.task.category.color}" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/task_attachments_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-8dp"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:scaleX="0.8"
+                        android:scaleY="0.7"
+                        android:textColor="?attr/colorError"
+                        android:textSize="18sp"
+                        app:drawableTint="?attr/colorError"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/task_divider_view" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </com.mohammadhadisormeyli.taskmanagement.ui.custom.swipelayout.SwipeRevealLayout>
+</layout>

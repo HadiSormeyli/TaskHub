@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mohammadhadisormeyli.taskmanagement">
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:name="com.mohammadhadisormeyli.taskmanagement.TaskManagementApp"
+        android:allowBackup="true"
+        android:configChanges="locale"
+        android:icon="@drawable/app_icon"
+        android:label="@string/default_app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TaskManagment"
+        tools:replace="android:label">
+        <activity
+            android:name="com.mohammadhadisormeyli.taskmanagement.ui.alarm.AlarmActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mohammadhadisormeyli.taskmanagement.ui.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mohammadhadisormeyli.taskmanagement.ui.sign.StartActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.mohammadhadisormeyli.taskmanagement.ui.main.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <receiver android:name="com.mohammadhadisormeyli.taskmanagement.alarm.AlarmBroadcastReceiver" />
+
+        <service android:name="com.mohammadhadisormeyli.taskmanagement.alarm.AlarmService" />
+        <service android:name="com.mohammadhadisormeyli.taskmanagement.alarm.RescheduleAlarmsService" />
+    </application>
+</manifest>

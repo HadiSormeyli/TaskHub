@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="solidColor" format="color|reference" />
+        <attr name="mSelectorWheelItem" format="integer" />
+        <attr name="mTextSize" format="dimension" />
+        <attr name="mSelectedTextSize" format="dimension" />
+        <attr name="selectionDivider" format="reference" />
+        <attr name="selectionDividerHeight" format="dimension" />
+        <attr name="selectionDividersDistance" format="dimension" />
+        <attr name="internalMinHeight" format="dimension" />
+        <attr name="internalMaxHeight" format="dimension" />
+        <attr name="internalMinWidth" format="dimension" />
+        <attr name="internalMaxWidth" format="dimension" />
+        <attr name="internalLayout" format="reference" />
+        <attr name="virtualButtonPressedDrawable" format="reference" />
+        <attr name="minValue" format="integer" />
+        <attr name="maxValue" format="integer" />
+        <attr name="value" format="integer" />
+        <attr name="twoDigitFormat" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+        <attr name="flingVelocity" format="integer" />
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="etv_animationDuration" format="integer" />
+        <attr name="etv_collapsedLines" format="integer" />
+        <attr name="etv_moreColor" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandIconView">
+        <attr name="eiv_roundedCorners" format="boolean" />
+        <attr name="eiv_switchColor" format="boolean" />
+        <attr name="eiv_color" format="color" />
+        <attr name="eiv_colorMore" format="color" />
+        <attr name="eiv_colorLess" format="color" />
+        <attr name="eiv_colorIntermediate" format="color" />
+        <attr name="eiv_animationDuration" format="integer" />
+        <attr name="eiv_padding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="UICalendar">
+
+        <attr name="showWeek" format="boolean" />
+        <attr name="hideArrows" format="boolean" value="true" />
+        <attr name="datePattern" format="string" value="MMMM" />
+
+        <attr name="firstDayOfWeek" format="enum">
+            <enum name="sunday" value="0" />
+            <enum name="monday" value="1" />
+            <enum name="tuesday" value="2" />
+            <enum name="wednesday" value="3" />
+            <enum name="thursday" value="4" />
+            <enum name="friday" value="5" />
+            <enum name="saturday" value="6" />
+        </attr>
+
+        <attr name="state" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+        </attr>
+
+        <attr name="calender_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="selecting" value="1" />
+        </attr>
+
+        <attr name="textColor" format="color" />
+        <attr name="primaryColor" format="color" />
+
+        <attr name="todayItem_textColor" format="color" />
+        <attr name="todayItem_background" format="reference" />
+
+        <attr name="selectedItem_textColor" format="color" />
+        <attr name="selectedItem_background" format="reference" />
+
+        <attr name="buttonLeft_drawable" format="integer" />
+        <attr name="buttonRight_drawable" format="integer" />
+
+        <attr name="buttonLeft_drawableTintColor" format="color" />
+        <attr name="buttonRight_drawableTintColor" format="color" />
+
+        <attr name="expandIconColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_colorRipple" format="color" />
+        <attr name="fab_showShadow" format="boolean" />
+        <attr name="fab_shadowColor" format="color" />
+        <attr name="fab_shadowRadius" format="dimension" />
+        <attr name="fab_shadowXOffset" format="dimension" />
+        <attr name="fab_shadowYOffset" format="dimension" />
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_showAnimation" format="reference" />
+        <attr name="fab_hideAnimation" format="reference" />
+        <attr name="fab_label" format="string" />
+        <attr name="fab_elevationCompat" format="dimension" />
+        <attr name="fab_progress_color" format="color" />
+        <attr name="fab_progress_backgroundColor" format="color" />
+        <attr name="fab_progress_indeterminate" format="boolean" />
+        <attr name="fab_progress_max" format="integer" />
+        <attr name="fab_progress" format="integer" />
+        <attr name="fab_progress_showBackground" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionMenu">
+        <attr name="menu_showShadow" format="boolean" />
+        <attr name="menu_buttonSpacing" format="dimension" />
+        <attr name="menu_labels_margin" format="dimension" />
+        <attr name="menu_labels_showAnimation" format="reference" />
+        <attr name="menu_labels_hideAnimation" format="reference" />
+        <attr name="menu_labels_paddingTop" format="dimension" />
+        <attr name="menu_labels_paddingLeft" format="dimension" />
+        <attr name="menu_labels_paddingRight" format="dimension" />
+        <attr name="menu_labels_paddingBottom" format="dimension" />
+        <attr name="menu_labels_padding" format="dimension" />
+        <attr name="menu_labels_textColor" format="reference|color" />
+        <attr name="menu_labels_textSize" format="dimension" />
+        <attr name="menu_labels_cornerRadius" format="dimension" />
+        <attr name="menu_labels_showShadow" format="boolean" />
+        <attr name="menu_labels_colorNormal" format="color" />
+        <attr name="menu_labels_colorPressed" format="color" />
+        <attr name="menu_labels_colorRipple" format="color" />
+        <attr name="menu_labels_position" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="menu_icon" format="reference" />
+        <attr name="menu_animationDelayPerItem" format="integer" />
+        <attr name="menu_buttonToggleAnimation" format="reference" />
+        <attr name="menu_labels_singleLine" format="boolean" />
+        <attr name="menu_labels_ellipsize" format="enum">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+            <enum name="marquee" value="4" />
+        </attr>
+        <attr name="menu_labels_maxLines" format="integer" />
+        <attr name="menu_fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="menu_labels_style" format="reference" />
+        <attr name="menu_labels_customFont" format="string" />
+        <attr name="menu_shadowColor" format="color" />
+        <attr name="menu_shadowRadius" format="dimension" />
+        <attr name="menu_shadowXOffset" format="dimension" />
+        <attr name="menu_shadowYOffset" format="dimension" />
+        <attr name="menu_colorNormal" format="color" />
+        <attr name="menu_colorPressed" format="color" />
+        <attr name="menu_colorRipple" format="color" />
+        <attr name="menu_openDirection" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+        </attr>
+        <attr name="menu_backgroundColor" format="color" />
+        <attr name="menu_fab_label" format="string" />
+        <attr name="menu_fab_show_animation" format="reference" />
+        <attr name="menu_fab_hide_animation" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressBar">
+        <attr name="cpb_progress" format="integer" />
+        <attr name="cpb_progress_max" format="integer" />
+        <attr name="cpb_indeterminate_mode" format="boolean" />
+        <attr name="cpb_progressbar_color" format="color" />
+        <attr name="cpb_progressbar_color_start" format="color" />
+        <attr name="cpb_progressbar_color_end" format="color" />
+        <attr name="cpb_progressbar_color_direction">
+            <flag name="left_to_right" value="1" />
+            <flag name="right_to_left" value="2" />
+            <flag name="top_to_bottom" value="3" />
+            <flag name="bottom_to_top" value="4" />
+        </attr>
+        <attr name="cpb_background_progressbar_color" format="color" />
+        <attr name="cpb_background_progressbar_color_start" format="color" />
+        <attr name="cpb_background_progressbar_color_end" format="color" />
+        <attr name="cpb_background_progressbar_color_direction">
+            <flag name="left_to_right" value="1" />
+            <flag name="right_to_left" value="2" />
+            <flag name="top_to_bottom" value="3" />
+            <flag name="bottom_to_top" value="4" />
+        </attr>
+        <attr name="cpb_progressbar_width" format="dimension" />
+        <attr name="cpb_background_progressbar_width" format="dimension" />
+        <attr name="cpb_round_border" format="boolean" />
+        <attr name="cpb_start_angle" format="float" />
+        <attr name="cpb_progress_direction">
+            <flag name="to_right" value="1" />
+            <flag name="to_left" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TimelineView">
+        <attr name="timeline_item_type" format="enum">
+            <enum name="first" value="0" />
+            <enum name="middle" value="1" />
+            <enum name="last" value="2" />
+            <enum name="spacer" value="3" />
+        </attr>
+
+        <attr name="indicator_style" format="enum">
+            <enum name="filled" value="0" />
+            <enum name="empty" value="1" />
+            <enum name="checked" value="2" />
+        </attr>
+        <attr name="indicator_drawable" format="reference" />
+        <attr name="indicator_size" format="dimension" />
+        <attr name="indicator_color" format="color" />
+        <attr name="indicator_y_position" format="float" />
+
+        <attr name="checked_indicator_size" format="dimension" />
+        <attr name="checked_indicator_stroke_width" format="dimension" />
+
+        <attr name="line_style" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dashed" value="1" />
+        </attr>
+        <attr name="line_width" format="dimension" />
+        <attr name="line_color" format="color" />
+
+        <attr name="line_dash_length" format="dimension" />
+        <attr name="line_dash_gap" format="dimension" />
+        <attr name="line_padding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SemiCircleView">
+        <attr name="arcProportion" format="float" />
+        <attr name="startAngle" format="float" />
+        <attr name="paint" format="color|reference" />
+    </declare-styleable>
+</resources>

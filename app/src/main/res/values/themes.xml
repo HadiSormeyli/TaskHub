@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.TaskManagment" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/indigo_a_400</item>
+        <item name="colorPrimaryVariant">@color/indigo_a_700</item>
+        <item name="colorOnPrimary">@color/pure_white</item>
+        <item name="colorSecondary">@color/indigo_a_400</item>
+        <item name="colorSecondaryVariant">@color/indigo_a_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorControlNormal">@color/pure_black</item>
+        <item name="colorSurface">@color/pure_white</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorBackgroundFloating">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <item name="android:windowBackground">?attr/colorOnBackground</item>
+
+        <item name="fontFamily">@font/roboto_en</item>
+        <item name="android:fontFamily">@font/roboto_en</item>
+
+        <item name="textColor">@color/pure_black</item>
+        <item name="android:textColor">@color/pure_black</item>
+    </style>
+</resources>

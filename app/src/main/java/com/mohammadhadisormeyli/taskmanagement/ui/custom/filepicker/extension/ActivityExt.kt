@@ -1,0 +1,57 @@
+
+import androidx.annotation.FloatRange
+import androidx.appcompat.app.AppCompatActivity
+import com.mohammadhadisormeyli.taskmanagement.ui.custom.filepicker.FilePicker
+import com.mohammadhadisormeyli.taskmanagement.ui.custom.filepicker.FileType
+import com.mohammadhadisormeyli.taskmanagement.ui.custom.filepicker.ListDirection
+import com.mohammadhadisormeyli.taskmanagement.ui.custom.filepicker.data.model.Media
+
+/**
+ * Show file picker
+ *
+ * @param title
+ * @param titleTextColor
+ * @param submitText
+ * @param submitTextColor
+ * @param accentColor
+ * @param fileType
+ * @param listDirection
+ * @param cancellable
+ * @param gridSpanCount
+ * @param limitItemSelection
+ * @param selectedFiles
+ * @param onSubmitClickListener
+ * @param onItemClickListener
+ */
+fun AppCompatActivity.showFilePicker(
+    title: String = FilePicker.DEFAULT_TITLE,
+    titleTextColor: Int = FilePicker.DEFAULT_TITLE_TEXT_COLOR,
+    submitText: String = FilePicker.DEFAULT_SUBMIT_TEXT,
+    submitTextColor: Int = FilePicker.DEFAULT_SUBMIT_TEXT_COLOR,
+    accentColor: Int = FilePicker.DEFAULT_ACCENT_COLOR,
+    fileType: FileType = FilePicker.DEFAULT_FILE_TYPE,
+    listDirection: ListDirection = FilePicker.DEFAULT_LIST_DIRECTION,
+    cancellable: Boolean = FilePicker.DEFAULT_CANCELABLE,
+    gridSpanCount: Int = FilePicker.DEFAULT_SPAN_COUNT,
+    limitItemSelection: Int = FilePicker.DEFAULT_LIMIT_COUNT,
+    @FloatRange(from = 0.0, to = 1.0)
+    overlayAlpha: Float = FilePicker.DEFAULT_OVERLAY_ALPHA,
+    selectedFiles: ArrayList<Media> = arrayListOf(),
+    onSubmitClickListener: OnSubmitClickListener? = null,
+    onItemClickListener: OnItemClickListener? = null,
+) = FilePicker.Builder(this)
+    .setTitle(title)
+    .setTitleTextColor(titleTextColor)
+    .setSubmitText(submitText)
+    .setSubmitTextColor(submitTextColor)
+    .setAccentColor(accentColor)
+    .setFileType(fileType)
+    .setListDirection(listDirection)
+    .setCancellable(cancellable)
+    .setGridSpanCount(gridSpanCount)
+    .setLimitItemSelection(limitItemSelection)
+    .setSelectedFiles(selectedFiles)
+    .setOverlayAlpha(overlayAlpha)
+    .setOnSubmitClickListener(onSubmitClickListener)
+    .setOnItemClickListener(onItemClickListener)
+    .buildAndShow()

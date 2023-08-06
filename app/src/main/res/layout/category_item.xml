@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="category"
+            type="com.mohammadhadisormeyli.taskmanagement.model.Category" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/category_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="224dp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/category_icon_ifv"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:padding="16dp"
+                android:src="@{category.icon.drawable}"
+                app:layout_constraintBottom_toTopOf="@+id/category_title_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:opacity_backgroundColor="@{category.color}"
+                app:roundPercent="1"
+                app:srcCompat="@drawable/ic_category"
+                app:tint="@color/pure_white" />
+
+            <TextView
+                android:id="@+id/category_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/padding_8"
+                android:text="@{category.title}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/category_icon_ifv"
+                app:opacity_backgroundColor="@{category.color}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

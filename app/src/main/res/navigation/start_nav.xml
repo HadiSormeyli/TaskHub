@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/start_nav"
+    app:startDestination="@+id/startFragment">
+
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.sign.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_signFragment"
+            app:destination="@id/signFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signFragment"
+        android:name="com.mohammadhadisormeyli.taskmanagement.ui.sign.SignFragment"
+        android:label="SignFragment" />
+
+</navigation>

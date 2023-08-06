@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/delete_category_item"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="@string/delete_category" />
+
+    <item
+        android:id="@+id/menu2"
+        android:icon="@drawable/ic_baseline_reorder_24"
+        android:orderInCategory="2"
+        android:title="@string/order_by">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/order_title_item"
+                    android:icon="@drawable/ic_baseline_title_24"
+                    android:orderInCategory="0"
+                    android:title="@string/title" />
+
+                <item
+                    android:id="@+id/order_date_item"
+                    android:icon="@drawable/ic_baseline_access_time_filled_24"
+                    android:orderInCategory="1"
+                    android:title="@string/date" />
+            </group>
+        </menu>
+    </item>
+</menu>
