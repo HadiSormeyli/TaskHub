@@ -23,7 +23,7 @@ Feel free to reach out to me via email or connect with me. I'm always open to co
 </p>
 <br/><br/>
 Minimum SDK level 21<br/>
-- Kotlin,Java<br/>
+- Kotlin,Java:
       - Lifecycle: Observe Android lifecycles and handle UI states upon the lifecycle changes.<br/>
       - ViewModel: Manages UI-related data holder and lifecycle aware. Allows data to survive configuration changes such as screen rotations.<br/>
       - DataBinding: Binds UI components in your layouts to data sources in your app using a declarative format rather than programmatically.<br/>
@@ -31,6 +31,6 @@ Minimum SDK level 21<br/>
       - Navigation Component Graphs - To use single activity multiple fragment architecture.<br/>
       - Hilt: For dependency injection.<br/>
       - Coroutines For asynchronous programming.<br/>
-- Architecture<br/>
+- Architecture:
   - MVVM Architecture (View - DataBinding - ViewModel - Model)<br/>
   - Repository Pattern<br/>
